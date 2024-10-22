@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Giraffe</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container" id="welcome-screen">
+        <h1>Happy Giraffe</h1>
+        <p>To my love, every moment with you is like a beautiful story. Let’s relive those special moments together. I love you, [Wife's Name].</p>
+        <audio controls autoplay loop>
+            <source src="romantic-music.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <button class="enter-btn" onclick="startGame()">Enter</button>
+        <div class="giraffe"></div>
+    </div>
+
+    <div class="container hidden" id="stage-1">
+        <h2>Blow Babe</h2>
+        <p>Blow into the microphone to inflate the balloon!</p>
+        <div class="balloon" id="balloon"></div>
+        <p id="message"></p>
+        <button onclick="nextStage('stage-2')">Next</button>
+    </div>
+
+    <div class="container hidden" id="stage-2">
+        <h2>Draw a Fun Memory</h2>
+        <p>Draw a day that made you smile with me.</p>
+        <canvas id="drawingCanvas"></canvas>
+        <button onclick="nextStage('stage-3')">Next</button>
+    </div>
+
+    <div class="container hidden" id="stage-3">
+        <h2>Snakes and Ladders</h2>
+        <p>Make a 'sss' sound into the microphone to move the snake!</p>
+        <div id="gameBoard">
+            <!-- Board with a visual representation of snakes and ladders here -->
+        </div>
+        <button onclick="rollDice()">Roll Dice</button>
+        <button onclick="nextStage('final')">Finish</button>
+    </div>
+
+    <div class="container hidden" id="final">
+        <h2>Congratulations!</h2>
+        <p>You’ve made it through all the stages, just like we’ve navigated our journey together. I love you!</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
